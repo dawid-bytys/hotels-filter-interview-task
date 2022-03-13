@@ -19,7 +19,7 @@ export const Header = () => {
           fontWeight={500}
           fontSize={['2rem', '2.3rem', '2.5rem', '2.7rem']}
         >
-          Hotel Filter
+          Hotels Filter
         </Heading>
       </Center>
       <Center>

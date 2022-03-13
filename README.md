@@ -1,5 +1,7 @@
 # hotels-filter-interview-task
 
+### Live: https://vigilant-raman-97654d.netlify.app/
+
 ## About the project itself
 
 At first I wanted to point out that I like this assignment very much and I have some comments: <br />
@@ -22,20 +24,20 @@ $ git clone https://github.com/salvia-dev/hotels-filter-interview-task && cd hot
 
 Install the dependencies at first
 
-```
-$ yarn install
-```
-
-or
-
-```
-$ npm install
+```zsh
+$ yarn install # or npm install
 ```
 
-Start the app
+Build the app
 
+```zsh
+$ yarn build
 ```
-$ yarn start
+
+Now, you are able to serve the built version by running
+
+```zsh
+$ yarn start # or npm start
 ```
 
 ## Final words
