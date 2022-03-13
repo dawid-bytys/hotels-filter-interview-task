@@ -1,8 +1,9 @@
-import axios from 'axios';
 import { BASE_API_HOTELS_URL, BASE_API_ROOMS_URL } from '../utils/constants';
 import type { Hotel, HotelData, Rooms } from '../utils/types';
+import axios from 'axios';
 
-export const fetchHotels = async () => {
+// TypeScript infered types here but I wanted to make sure the returned data has correct type
+export const fetchHotels = async (): Promise<Hotel[]> => {
   const { data } = await axios.get<Hotel[]>(BASE_API_HOTELS_URL);
 
   return data;

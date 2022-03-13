@@ -1,6 +1,6 @@
 import { Flex, IconButton, useColorModeValue } from '@chakra-ui/react';
 import { StarIcon } from '@chakra-ui/icons';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useWindowDimensions } from '../../hooks/useWindowDimensions';
 
 interface StarRatingProps {

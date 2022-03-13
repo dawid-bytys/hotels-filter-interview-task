@@ -42,8 +42,8 @@ export const Home = () => {
 
     // If there are any hotels which meet our filter criteria, display them
     if (filteredHotels.length) {
-      return filteredHotels.map((card, idx) => (
-        <HotelCard key={idx} {...card} />
+      return filteredHotels.map((hotel, idx) => (
+        <HotelCard key={idx} {...hotel} />
       ));
     }
 
