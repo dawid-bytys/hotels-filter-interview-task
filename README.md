@@ -1,59 +1,43 @@
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
+# hotels-filter-interview-task
 
-## Available Scripts
+## About the project itself
 
-In the project directory, you can run:
+At first I wanted to point out that I like this assignment very much and I have some comments: <br />
 
-### `yarn start`
+1. In my opinion, it would be better to modernize the backend so that hotels and rooms are returned from one endpoint rather than two. It would be much more efficient. I used `Promise.all()` here because there are relatively few requests, so I can afford it, but if there were a lot of them, it would be a big problem.
+2. I have been told to keep things simple, so I used a very nice library, which is `ChakraUI`. It allowed me to create components quickly and easily. I didn't have to bother with styling everything from scratch. It wasn't forced on me, but I learned something new while doing this assignment.
+3. We see a bit of props drilling in the code, but I didn't want to complicate my task by using `useContext()` or `redux-toolkit`.
+4. The first hotel has more photos than others so I took the liberty of using the `swiper` library to make a nice photo gallery. Just grab and move the photo with your finger or mouse.
+5. I was supposed to put photos where there are crosses. I didn't know if I could put any image in the header, but I don't think that's a problem. I wanted everything to look pleasant to the user. The image is from pexels.com.
+6. At the beginning, I created a simple UI in Figma to be able to reproduce my concept more easily. I hope you will like my aesthetics.
+7. I didn't use `react-router-dom` in this project because I don't see the need to do so because we only have one page.
 
-Runs the app in the development mode.<br /> Open
-[http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to build and run
 
-The page will reload if you make edits.<br /> You will also see any lint errors
-in the console.
+Clone the repo and cd into it
 
-### `yarn test`
+```
+$ git clone https://github.com/salvia-dev/hotels-filter-interview-task && cd hotels-filter-interview-task
+```
 
-Launches the test runner in the interactive watch mode.<br /> See the section
-about
-[running tests](https://facebook.github.io/create-react-app/docs/running-tests)
-for more information.
+Install the dependencies at first
 
-### `yarn build`
+```
+$ yarn install
+```
 
-Builds the app for production to the `build` folder.<br /> It correctly bundles
-React in production mode and optimizes the build for the best performance.
+or
 
-The build is minified and the filenames include the hashes.<br /> Your app is
-ready to be deployed!
+```
+$ npm install
+```
 
-See the section about
-[deployment](https://facebook.github.io/create-react-app/docs/deployment) for
-more information.
+Start the app
 
-### `yarn eject`
+```
+$ yarn start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Final words
 
-If you aren’t satisfied with the build tool and configuration choices, you can
-`eject` at any time. This command will remove the single build dependency from
-your project.
-
-Instead, it will copy all the configuration files and the transitive
-dependencies (webpack, Babel, ESLint, etc) right into your project so you have
-full control over them. All of the commands except `eject` will still work, but
-they will point to the copied scripts so you can tweak them. At this point
-you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for
-small and middle deployments, and you shouldn’t feel obligated to use this
-feature. However we understand that this tool wouldn’t be useful if you couldn’t
-customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the
-[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+I am ready to accept criticism of my code, website UI and functionality. I would like to get feedback on what I could change, what is good and what must be thrown away.
