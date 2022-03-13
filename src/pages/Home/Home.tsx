@@ -5,7 +5,7 @@ import { ErrorAlert, Filters, useFetchQueries } from '../../utils/grabber';
 import { useState } from 'react';
 import type { HotelData } from '../../utils/types';
 
-interface Filters {
+interface FiltersState {
   readonly starRating: number;
   readonly maxAdults: number;
   readonly maxChildren: number;
@@ -13,7 +13,7 @@ interface Filters {
 
 export const Home = () => {
   const request = useFetchQueries();
-  const [filters, setFilters] = useState<Filters>({
+  const [filters, setFilters] = useState<FiltersState>({
     starRating: 0,
     maxAdults: 0,
     maxChildren: 0,
