@@ -14,7 +14,7 @@ export const ErrorAlert = ({ error }: ErrorAlertProps) => {
         justifyContent="center"
         alignItems="center"
         fontWeight={500}
-        mt="4rem"
+        mt="10rem"
       >
         {error}
       </Alert>

@@ -28,7 +28,7 @@ export const useFetchQueries = () => {
         if (axios.isAxiosError(err)) {
           setQueriesState({
             action: 'error',
-            error: `Error: ${err.response?.data.error}`,
+            error: `Error: ${err.message}`,
           });
         }
       }
