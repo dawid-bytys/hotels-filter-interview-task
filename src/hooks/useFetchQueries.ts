@@ -1,7 +1,7 @@
-import { fetchHotels, fetchRooms } from '../api/fetchData';
+import { fetchHotels, fetchRoomsAndSerialize } from '../api/fetchData';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import type { HotelData } from '../utils/types';
+import axios from 'axios';
 
 type QueriesState =
   | { action: 'loading' }
@@ -17,9 +17,7 @@ export const useFetchQueries = () => {
     const performFetchingData = async () => {
       try {
         const hotels = await fetchHotels();
-        const roomsRequests = hotels.map(hotel => {
-          return fetchRooms(hotel);
-        });
+        const roomsRequests = hotels.map(fetchRoomsAndSerialize);
         const hotelsWithRooms = await Promise.all(roomsRequests);
 
         setQueriesState({

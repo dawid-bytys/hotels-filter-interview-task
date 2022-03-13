@@ -1,7 +1,7 @@
 import { Center, Alert } from '@chakra-ui/react';
 
 interface ErrorAlertProps {
-  error: string;
+  readonly error: string;
 }
 
 export const ErrorAlert = ({ error }: ErrorAlertProps) => {

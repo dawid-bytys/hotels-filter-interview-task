@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { BASE_API_HOTELS_URL, BASE_API_ROOMS_URL } from '../utils/constants';
-import type { Hotel, Rooms } from '../utils/types';
+import type { Hotel, HotelData, Rooms } from '../utils/types';
 
 export const fetchHotels = async () => {
   const { data } = await axios.get<Hotel[]>(BASE_API_HOTELS_URL);
@@ -8,11 +8,12 @@ export const fetchHotels = async () => {
   return data;
 };
 
-export const fetchRooms = async (hotel: Hotel) => {
+export const fetchRoomsAndSerialize = async (
+  hotel: Hotel,
+): Promise<HotelData> => {
   const { data } = await axios.get<Rooms>(BASE_API_ROOMS_URL + hotel.id);
 
   return {
-    id: hotel.id,
     name: hotel.name,
     address1: hotel.address1,
     address2: hotel.address2,
