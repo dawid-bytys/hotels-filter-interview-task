@@ -31,7 +31,7 @@ $ yarn install # or npm install
 Build the app
 
 ```zsh
-$ yarn build
+$ yarn build # or npm build
 ```
 
 Now, you are able to serve the built version by running
