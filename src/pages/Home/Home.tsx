@@ -19,10 +19,10 @@ export const Home = () => {
     maxChildren: 0,
   });
 
-  const updateFilters = (newValue: number, name: string) => {
+  const updateFilters = (key: string, newValue: number) => {
     setFilters(prevState => ({
       ...prevState,
-      [name]: newValue,
+      [key]: newValue,
     }));
   };
 

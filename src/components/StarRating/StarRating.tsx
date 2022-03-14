@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useWindowDimensions } from '../../hooks/useWindowDimensions';
 
 interface StarRatingProps {
-  updateFilters: (newValue: number, name: string) => void;
+  updateFilters: (key: string, newValue: number) => void;
 }
 
 /*
@@ -17,7 +17,7 @@ export const StarRating = ({ updateFilters }: StarRatingProps) => {
   const emptyStarColor = useColorModeValue('blackAlpha.300', 'whiteAlpha.300');
 
   const handleStarClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    updateFilters(+e.currentTarget.value, e.currentTarget.name);
+    updateFilters(e.currentTarget.name, +e.currentTarget.value);
     setRating(+e.currentTarget.value);
   };
 

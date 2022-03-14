@@ -11,14 +11,14 @@ import {
 import { StarRating } from '../StarRating/StarRating';
 
 interface FiltersProps {
-  updateFilters: (newValue: number, name: string) => void;
+  updateFilters: (key: string, newValue: number) => void;
 }
 
 export const Filters = (props: FiltersProps) => {
   // Higher Order Function because I cannot access the name attribute via Chakra's onChange event
   const handleChange =
-    (name: string) => (_valueAsString: string, valueAsNumber: number) => {
-      props.updateFilters(valueAsNumber, name);
+    (key: string) => (_valueAsString: string, valueAsNumber: number) => {
+      props.updateFilters(key, valueAsNumber);
     };
 
   return (
