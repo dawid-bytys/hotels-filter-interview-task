@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useWindowDimensions } from '../../hooks/useWindowDimensions';
 
 interface StarRatingProps {
-  readonly updateFilters: (newValue: number, name: string) => void;
+  updateFilters: (newValue: number, name: string) => void;
 }
 
 /*

@@ -1,11 +1,11 @@
 import { Box, Text, Heading, useColorModeValue, Flex } from '@chakra-ui/react';
 
-type RoomCardProps = Readonly<{
-  name: string;
-  maxAdults: number;
-  maxChildren: number;
-  description: string;
-}>;
+interface RoomCardProps {
+  readonly name: string;
+  readonly maxAdults: number;
+  readonly maxChildren: number;
+  readonly description: string;
+}
 
 export const RoomCard = (props: RoomCardProps) => {
   const roomCardBgColor = useColorModeValue('blackAlpha.100', 'whiteAlpha.200');

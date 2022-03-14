@@ -6,9 +6,9 @@ import { useState } from 'react';
 import type { HotelData } from '../../utils/types';
 
 interface FiltersState {
-  readonly starRating: number;
-  readonly maxAdults: number;
-  readonly maxChildren: number;
+  starRating: number;
+  maxAdults: number;
+  maxChildren: number;
 }
 
 export const Home = () => {

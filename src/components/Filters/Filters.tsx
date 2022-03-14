@@ -11,10 +11,7 @@ import {
 import { StarRating } from '../StarRating/StarRating';
 
 interface FiltersProps {
-  readonly starRating: number;
-  readonly maxAdults: number;
-  readonly maxChildren: number;
-  readonly updateFilters: (newValue: number, name: string) => void;
+  updateFilters: (newValue: number, name: string) => void;
 }
 
 export const Filters = (props: FiltersProps) => {
