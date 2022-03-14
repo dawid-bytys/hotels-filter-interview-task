@@ -1,9 +1,18 @@
-import { Flex, Center, Heading, Image, useColorMode } from '@chakra-ui/react';
+import {
+  Flex,
+  Center,
+  Heading,
+  Image,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { ThemeSwitch } from '../../utils/grabber';
 import BackgroundImage from '../../assets/img/background.jpeg';
 
 export const Header = () => {
-  const { colorMode } = useColorMode();
+  const gradientColor = useColorModeValue(
+    'rgba(255, 255, 255, 1)',
+    'rgba(26, 32, 44, 1)',
+  );
 
   return (
     <Flex
@@ -39,16 +48,8 @@ export const Header = () => {
           height: '60%',
           background: `linear-gradient(
           180deg,
-          ${
-            colorMode === 'light'
-              ? 'rgba(255, 255, 255, 0)'
-              : 'rgba(26, 32, 44, 0)'
-          } 0%,
-          ${
-            colorMode === 'light'
-              ? 'rgba(255, 255, 255, 1)'
-              : 'rgba(26, 32, 44, 1)'
-          } 100%
+          rgba(0,0,0,0) 0%,
+          ${gradientColor} 100%
         );`,
         }}
       >
