@@ -34,10 +34,8 @@ export const useFetchQueries = () => {
       }
     };
 
-    if (queriesState.action === 'loading') {
-      void performFetchingData();
-    }
-  });
+    void performFetchingData();
+  }, []);
 
   return queriesState;
 };
