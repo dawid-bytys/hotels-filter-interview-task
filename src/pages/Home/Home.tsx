@@ -52,7 +52,7 @@ export const Home = () => {
       ));
     }
 
-    // Otherwise, inform a user there are no hotels meeting theirs criteria
+    // Otherwise, inform a user there are no hotels meeting their criteria
     return (
       <Flex
         direction="column"
