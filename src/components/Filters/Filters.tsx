@@ -8,7 +8,7 @@ import {
   NumberInputStepper,
   Text,
 } from '@chakra-ui/react';
-import { StarRating } from '../StarRating/StarRating';
+import { StarRating } from '../../utils/grabber';
 
 interface FiltersProps {
   updateFilters: (key: string, newValue: number) => void;

@@ -1,7 +1,7 @@
 import { Flex, IconButton, useColorModeValue } from '@chakra-ui/react';
 import { StarIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
-import { useWindowDimensions } from '../../hooks/useWindowDimensions';
+import { useWindowDimensions } from '../../utils/grabber';
 
 interface StarRatingProps {
   updateFilters: (key: string, newValue: number) => void;

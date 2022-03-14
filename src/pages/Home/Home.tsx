@@ -1,7 +1,12 @@
 import { Text, Flex } from '@chakra-ui/react';
 import { WarningIcon } from '@chakra-ui/icons';
-import { HotelCard, Loading } from '../../utils/grabber';
-import { ErrorAlert, Filters, useFetchQueries } from '../../utils/grabber';
+import {
+  HotelCard,
+  Loading,
+  ErrorAlert,
+  Filters,
+  useFetchQueries,
+} from '../../utils/grabber';
 import { useState } from 'react';
 import type { HotelData } from '../../utils/types';
 
